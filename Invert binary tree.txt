@@ -1,0 +1,11 @@
+INVERT BINARY TREE
+
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null) 
+            return root ;
+        TreeNode node = new TreeNode(root.val,invertTree(root.right),invertTree(root.left));
+         return node;
+        
+    }
+}
